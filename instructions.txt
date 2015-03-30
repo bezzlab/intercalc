@@ -1,0 +1,30 @@
+usage: intercalc.py [-h] [-v]
+                    targetfile backgroundfile outputfile massaccuracy
+                    peakwidth
+
+positional arguments:
+  targetfile      input file containing target peptides*
+  backgroundfile  input file containing background peptides*
+  outputfile      output file containing target peptides with interference
+                  information*
+  massaccuracy    mass accuracy in Daltons
+  peakwidth       width of eluction peaks in hydrophobicity units
+
+optional arguments:
+  -h, --help      show this help message and exit
+  -v, --verbose   print progress information to console
+
+======
+
+*All files are TSV format, where each row is a target and columns are:
+1. Peptide sequence
+2. Name of protein to which sequence belongs
+3. Molecular weight
+4. Hydrophobicity
+5. Interferent score (present in ouput file only)
+
+======
+
+Example command line:
+
+intercalc.py test/targets.tsv test/background.tsv ouput.tsv 0.1 1 -v
