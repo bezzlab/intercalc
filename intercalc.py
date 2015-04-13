@@ -31,7 +31,7 @@ outfile = open(args.outputfile, "w")  # output always called intercalc.tsv
 infile = open(args.targetfile, "r")
 
 # append interferent probablity column heading
-outfile.write(infile.readline().rstrip()+"\tInteferent score\n")
+outfile.write(infile.readline().rstrip()+"\tInterferent score\n")
 if args.verbose:
   print "Annotating targets with interference data "
 
