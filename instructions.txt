@@ -1,14 +1,18 @@
 usage: intercalc.py [-h] [-v]
                     targetfile backgroundfile outputfile massaccuracy
-                    peakwidth
+                    peakwidth targetz z1pc z2pc z3pc
 
 positional arguments:
-  targetfile      input file containing target peptides*
-  backgroundfile  input file containing background peptides*
+  targetfile      input file containing target peptides
+  backgroundfile  input file containing background peptides
   outputfile      output file containing target peptides with interference
-                  information*
+                  information
   massaccuracy    mass accuracy in Daltons
   peakwidth       width of eluction peaks in hydrophobicity units
+  targetz         charge state of target peptides (integer)
+  z1pc            proportion of background peptides expected to singly charged
+  z2pc            proportion of background peptides expected to doubly charged
+  z3pc            proportion of background peptides expected to triply charged
 
 optional arguments:
   -h, --help      show this help message and exit
@@ -27,4 +31,4 @@ optional arguments:
 
 Example command line:
 
-intercalc.py test/targets.tsv test/background.tsv ouput.tsv 0.1 1 -v
+intercalc.py test/targets.tsv test/background.tsv ouput.tsv 0.1 1 2 0.3 0.7 0.1 -v

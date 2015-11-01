@@ -1,0 +1,4 @@
+*.pyc
+intercheck.xlsx
+ouput.tsv
+ouput _OLD.tsv
